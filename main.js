@@ -1,9 +1,10 @@
 const express = require('express')
 const app = express()
-const port = 3000
+
+app.set('PORT', process.env.PORT || 7777);
 
 const dummyData = require('./HistoryFilterPageDemoData')
 let dataFake = dummyData
 app.get('/', (req, res) => res.send(dataFake))
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(app.get('PORT'), () => console.log(`Example app listening on port ${port}!`))

@@ -7,4 +7,4 @@ const dummyData = require('./HistoryFilterPageDemoData')
 let dataFake = dummyData
 app.get('/', (req, res) => res.send(dataFake))
 
-app.listen(app.get('PORT'), () => console.log(`Example app listening on port ${port}!`))
+app.listen(app.get('PORT'), () => console.log('success'))

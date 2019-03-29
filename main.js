@@ -10,9 +10,6 @@ let dataFake = dummyData
 
 
 app.use(express.static('public'))
-app.get('/temp', (req, res) => {
-    res.sendFile(__dirname+ '/public/index.html')
-})
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname+ '/public/temp.html')

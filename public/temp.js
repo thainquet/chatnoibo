@@ -8,11 +8,8 @@ let arrayLink = [
 ]
 const startInterval = async () => {
   document.getElementById("btn").innerHTML = "Please wait!"
-  // Get root
-  let root = document.getElementById("root");
   console.log("injecting");
-  await sleep(1000);
-  await makeNew(root);
+  await makeNew();
   await sleep(1000);
   document.getElementById("btn").outerHTML = "";
 }
@@ -20,7 +17,9 @@ const startInterval = async () => {
 // Get root
 let root = document.getElementById("root");
 
-const makeNew = async (root) => {
+const makeNew = async () => {
+  // Get root
+  let root = document.getElementById("root");
 
   // Create container
   let divContainer = document.createElement("div");

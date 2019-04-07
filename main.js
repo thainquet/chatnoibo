@@ -19,4 +19,8 @@ app.get('/vertical', (req, res) => {
     res.sendFile(__dirname+ '/public/index1.html')
 })
 
+app.get('/fakedata', (req,res)=> {
+    res.send(dataFake)
+})
+
 app.listen(app.get('PORT'), () => console.log('success'))

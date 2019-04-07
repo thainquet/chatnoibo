@@ -12,7 +12,11 @@ let dataFake = dummyData
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname+ '/public/temp.html')
+    res.sendFile(__dirname+ '/public/index.html')
+})
+
+app.get('/vertical', (req, res) => {
+    res.sendFile(__dirname+ '/public/index1.html')
 })
 
 app.listen(app.get('PORT'), () => console.log('success'))
